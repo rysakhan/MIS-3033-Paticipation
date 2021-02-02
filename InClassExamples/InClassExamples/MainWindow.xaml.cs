@@ -23,6 +23,25 @@ namespace InClassExamples
         public MainWindow()
         {
             InitializeComponent();
+            //Button button = new Button();
+
+            lblMessage.Content = string.Empty;
+
+            txtFavoriteNumber.Clear();
+        }
+
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+            //MessageBox.Show("You clicked me!");
+
+            MessageBox.Show("Thanks for clicking me!", "Clicked", MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
+
+            lblMessage.Content = "Hello World!";
+
+            string answer = txtFavoriteNumber.Text;
+            double result = Convert.ToDouble(answer);
+
+            
         }
     }
 }

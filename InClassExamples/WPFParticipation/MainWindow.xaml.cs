@@ -24,6 +24,17 @@ namespace WPFParticipation
         {
             InitializeComponent();
 
+            
+
+        }
+
+        
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            //MessageBox.Show("You clicked me!");
+
             string answerName = txtEnterName.Text;
 
             string bday = txtBDay.Text;
@@ -32,22 +43,10 @@ namespace WPFParticipation
 
             int birthyear = Birthday.Year;
 
-
-
-           
-
             int age = DateTime.Now.Year - birthyear;
 
-        }
 
-        
-
-        public void Button_Click(object sender, RoutedEventArgs e)
-        {
-            
-                //MessageBox.Show("You clicked me!");
-
-                MessageBox.Show("Hey " + answerName + "! You are " + age + " years old!");
+            MessageBox.Show("Hey " + answerName + "! You are " + age + " years old!");
 
                 //lblMessage.Content = "Hello World!";
 
@@ -62,5 +61,16 @@ namespace WPFParticipation
         {
 
         }
+
+        private void btnCalculate_MouseEnter(object sender, MouseEventArgs e)
+        {
+            MainWindow1.Background = Brushes.DarkGreen;
+        }
+
+        private void btnCalculate_MouseLeave(object sender, MouseEventArgs e)
+        {
+            MainWindow1.Background = Brushes.BlueViolet;
+        }
+
     }
 }

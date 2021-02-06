@@ -1,4 +1,4 @@
-﻿<Window x:Class="WPFParticipation.MainWindow"
+﻿<Window x:Name="MainWindow1" x:Class="WPFParticipation.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -13,7 +13,7 @@
         <Label x:Name="lblName" Content="What is your name?" HorizontalAlignment="Left" Margin="23,31,0,0" VerticalAlignment="Top" FontFamily="Stencil" FontSize="20"/>
         <TextBox x:Name="txtEnterName" HorizontalAlignment="Left" Height="34" Margin="259,31,0,0" TextWrapping="Wrap" Text="Enter name here..." VerticalAlignment="Top" Width="429" TextChanged="TextBox_TextChanged"/>
         <Label x:Name="lblBDay" Content="What is your Birthdate?" HorizontalAlignment="Left" Margin="23,97,0,0" VerticalAlignment="Top" FontFamily="Stencil" FontSize="20"/>
-        <Button x:Name="btnCalculate" Content="Calculate My Age!" HorizontalAlignment="Left" Margin="521,90,0,0" VerticalAlignment="Top" Width="181" Height="83" Click="Button_Click" FontFamily="Modern No. 20" FontSize="22" Background="#FFD37474"/>
+        <Button x:Name="btnCalculate" Content="Calculate My Age!" HorizontalAlignment="Left" Margin="521,90,0,0" VerticalAlignment="Top" Width="181" Height="83" Click="Button_Click" FontFamily="Modern No. 20" FontSize="22" Background="#FFD37474" MouseEnter="btnCalculate_MouseEnter"/>
         <TextBox x:Name="txtBDay" HorizontalAlignment="Left" Height="41" Margin="302,90,0,0" TextWrapping="Wrap" Text="enter MM/DD/YYYY" VerticalAlignment="Top" Width="200" TextChanged="TextBox_TextChanged"/>
 
     </Grid>

@@ -10,9 +10,9 @@
         <Grid.Background>
             <ImageBrush ImageSource="https://images02.military.com/sites/default/files/styles/full/public/media/veteran-jobs/content-images/2016/03/chucknorris.jpg?itok=_J3M4O-S"/>
         </Grid.Background>
-        <ComboBox x:Name="cbo_Categories" HorizontalAlignment="Left" Height="195" Margin="10,10,0,0" VerticalAlignment="Top" Width="269"/>
-        <TextBox x:Name="txt_Joke" HorizontalAlignment="Left" Height="102" Margin="557,45,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="203"/>
-        <Button x:Name="btn_MakeJoke" Content="Button" HorizontalAlignment="Left" Height="44" Margin="333,237,0,0" VerticalAlignment="Top" Width="173" Click="Button_Click"/>
+        <ComboBox x:Name="cbo_Categories" HorizontalAlignment="Left" Height="35" Margin="10,24,0,0" VerticalAlignment="Top" Width="269"/>
+        <Button x:Name="btn_MakeJoke" Content="Button" HorizontalAlignment="Left" Height="44" Margin="63,80,0,0" VerticalAlignment="Top" Width="173" Click="Button_Click"/>
+        <TextBlock x:Name="txt_Joke" HorizontalAlignment="Left" Height="74" Margin="10,141,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="269" Foreground="White"/>
 
     </Grid>
 </Window>

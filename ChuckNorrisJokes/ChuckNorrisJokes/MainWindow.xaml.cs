@@ -22,18 +22,52 @@ namespace ChuckNorrisJokes
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        string jokeURL = "https://api.chucknorris.io/jokes/random?category=";
+
+        string categoryURL = "https://api.chucknorris.io/jokes/categories";
+
         public MainWindow()
         {
             InitializeComponent();
 
+            
+
             using (var client = new HttpClient())
             {
-                string Data = client.GetStringAsync("https://api.chucknorris.io/").Result;
+                string CategoryData = client.GetStringAsync(categoryURL).Result;
 
-                API api = JsonConvert.DeserializeObject<API>(Data);
+                
+                List<string> catergoryList = JsonConvert.DeserializeObject<List<string>>(CategoryData);
+                //categoryAPI CatApi = JsonConvert.DeserializeObject<categoryAPI>(CategoryData);
 
+                foreach (string categoryName in catergoryList)
+                {
+                    cbo_Categories.Items.Add(categoryName);
+                }
+
+                cbo_Categories.Items.Add("All");
 
             }
+
+      
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string SelectedCategory = (string)cbo_Categories.SelectedItem;
+
+            using (var client = new HttpClient())
+            {
+                string JokeStuff = client.GetStringAsync(jokeURL+SelectedCategory).Result;
+                API jokeAPI = JsonConvert.DeserializeObject<API>(JokeStuff);
+
+                txt_Joke.Text = jokeAPI.value;
+            }
+
+            
+        }
+
+       
     }
 }

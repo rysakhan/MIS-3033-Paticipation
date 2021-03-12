@@ -27,6 +27,8 @@ namespace ChuckNorrisJokes
 
         string categoryURL = "https://api.chucknorris.io/jokes/categories";
 
+        string randomURL = "https://api.chucknorris.io/jokes/search?query=";
+
         public MainWindow()
         {
             InitializeComponent();
@@ -62,7 +64,15 @@ namespace ChuckNorrisJokes
                 string JokeStuff = client.GetStringAsync(jokeURL+SelectedCategory).Result;
                 API jokeAPI = JsonConvert.DeserializeObject<API>(JokeStuff);
 
+                //string RandomStuff = client.GetStringAsync(randomURL).Result;
+                //API RandonJoke = JsonConvert.DeserializeObject<API>(RandomStuff);
+
                 txt_Joke.Text = jokeAPI.value;
+
+                //if (SelectedCategory.Contains("All"))
+                //{
+                    //txt_Joke.Text = RandonJoke.value;
+                //}
             }
 
             
